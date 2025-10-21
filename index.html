@@ -7,13 +7,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Hi, I'm <span class="highlight">Anh</span> 👋</h1>
-      <p class="tagline">"I draw, I code, I occasionally pretend I know what I’m doing." 😌</p>
-    </header>
+  <nav>
+    <div class="logo">bkvananh</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#tech">Tech</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section>
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span class="accent">Anh</span> 👋</h1>
+      <p class="subtitle">I draw, I code, I occasionally pretend I know what I’m doing. 😌</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="fade-in">
       <h2>🧠 About Me</h2>
       <p>🎓 Multimedia Technology student @ PTIT HCM</p>
       <p>🎨 Artist by heart, Developer by accident</p>
@@ -21,29 +33,42 @@
       <p>☕ Currently running on caffeine and half-finished ideas</p>
     </section>
 
-    <section>
+    <section id="tech" class="fade-in">
       <h2>🛠️ Tech & Tools I Use</h2>
-      <ul>
-        <li><b>Languages:</b> JavaScript, Python, C/C++, SQL</li>
-        <li><b>Frameworks & Tools:</b> React, Node.js, Figma, Git, VS Code</li>
-        <li><b>Other:</b> Photoshop, Clip Studio Paint, After Effects</li>
-      </ul>
+      <div class="tech-grid">
+        <div class="card">
+          <h3>Languages</h3>
+          <p>JavaScript, Python, C/C++, SQL</p>
+        </div>
+        <div class="card">
+          <h3>Frameworks</h3>
+          <p>React, Node.js</p>
+        </div>
+        <div class="card">
+          <h3>Tools</h3>
+          <p>Figma, Git, VS Code</p>
+        </div>
+        <div class="card">
+          <h3>Creative</h3>
+          <p>Photoshop, Clip Studio Paint, After Effects</p>
+        </div>
+      </div>
     </section>
 
-    <section>
+    <section id="projects" class="fade-in">
       <h2>🌈 Current Projects</h2>
       <p>🧩 Building small things that look cool and sometimes even work</p>
       <p>🎶 Experimenting with interactive visuals and creative coding</p>
       <p>📚 Trying not to break my own portfolio... again</p>
     </section>
 
-    <section>
+    <section id="contact" class="fade-in">
       <h2>💬 Let's Talk!</h2>
       <p>💌 Email: <a href="mailto:n23dcpt002@student.ptithcm.edu.vn">n23dcpt002@student.ptithcm.edu.vn</a></p>
-      <p>🌐 Portfolio : <a href="bkvananh.github.io">bkvananh.github.io/a></p>
+      <p>🌐 Portfolio (soon™): coming when I stop procrastinating</p>
     </section>
 
-    <section>
+    <section id="fun" class="fade-in">
       <h2>⚡ Fun Facts</h2>
       <ul>
         <li>I can sew plushies, fix laptops, and make them both look cute.</li>
@@ -51,11 +76,12 @@
         <li>I name my files things like <code>fghdgfgfsgfdgjfh.js</code>.</li>
       </ul>
     </section>
+  </main>
 
-    <footer>
-      <p>✨ Made with ☕ & curiosity | <a href="https://github.com/bkvananh" target="_blank">GitHub</a></p>
-    </footer>
-  </div>
+  <footer>
+    <p>✨ Made with ☕ & curiosity — <a href="https://github.com/bkvananh" target="_blank">GitHub</a></p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
