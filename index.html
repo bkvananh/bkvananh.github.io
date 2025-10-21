@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Name – Developer</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bkva | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Full-stack Developer | JavaScript / Python / DevOps</p>
+  <header class="navbar">
+    <div class="logo">bkva</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
-  <section id="about">
+
+  <section class="hero">
+    <h1>Hello, I'm <span class="highlight">BKVA</span></h1>
+    <p class="subtitle">A developer who loves minimal design & clean code.</p>
+    <button id="scrollBtn">View My Work</button>
+  </section>
+
+  <section id="about" class="about">
     <h2>About Me</h2>
-    <p>Brief intro…</p>
+    <p>
+      I'm a developer passionate about creating modern, fast, and aesthetic
+      websites. I focus on clarity, simplicity, and functionality — both in code and design.
+    </p>
   </section>
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>JavaScript</li>
-      <li>Python</li>
-      <li>Docker / Kubernetes</li>
-    </ul>
-  </section>
-  <section id="projects">
+
+  <section id="projects" class="projects">
     <h2>Projects</h2>
-    <article>
-      <h3>Project Name</h3>
-      <p>Short description… <a href="https://github.com/bkvananh/project">View on GitHub</a></p>
-    </article>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Portfolio Site</h3>
+        <p>A clean and minimal portfolio built with HTML, CSS, and JS.</p>
+        <a href="https://github.com/bkvananh/bkvananh" target="_blank">View Code →</a>
+      </div>
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>Fetches real-time data from an API and shows current weather.</p>
+        <a href="#">View Code →</a>
+      </div>
+      <div class="project-card">
+        <h3>UI Components</h3>
+        <p>Reusable UI component set for modern web projects.</p>
+        <a href="#">View Code →</a>
+      </div>
+    </div>
   </section>
-  <section id="contact">
+
+  <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p>Email: youremail@example.com</p>
-    <p>GitHub: <a href="https://github.com/bkvananh">@bkvananh</a></p>
+    <p>Want to collaborate or just say hi?</p>
+    <a href="mailto:n23dcpt002@student.ptithcm.edu.vn" class="email-btn">Send me an email</a>
   </section>
+
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    <p>© 2025 Your Name. Built with ❤️ and GitHub Pages.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
