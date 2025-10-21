@@ -1,14 +1,14 @@
-// Smooth scroll to Projects section
-document.getElementById("scrollBtn").addEventListener("click", () => {
-  document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+// Smooth scroll to Projects
+document.getElementById("scrollBtn")?.addEventListener("click", () => {
+  document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
 });
 
-// Navbar color change on scroll
+// Navbar shadow when scrolling
 window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 50) {
-    navbar.style.boxShadow = "0 2px 12px rgba(0, 0, 0, 0.1)";
+  const nav = document.querySelector(".navbar");
+  if (window.scrollY > 60) {
+    nav.style.background = "rgba(15,15,17,0.95)";
   } else {
-    navbar.style.boxShadow = "0 1px 10px rgba(0, 0, 0, 0.05)";
+    nav.style.background = "rgba(20,20,22,0.9)";
   }
 });
