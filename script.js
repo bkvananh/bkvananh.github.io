@@ -1,4 +1,15 @@
-// Fade-in animation when scrolling
+// Scroll smooth đến section khi click vào nav-btn
+document.querySelectorAll('.nav-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(btn.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// Fade-in effect khi cuộn
 const faders = document.querySelectorAll(".fade-in");
 
 const appearOptions = {
