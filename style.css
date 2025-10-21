@@ -27,7 +27,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(15, 15, 15, 0.8);
+  background: rgba(15, 15, 15, 0.85);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
@@ -48,14 +48,30 @@ nav .logo {
   gap: 25px;
 }
 
-.nav-links a {
+.nav-btn {
   text-decoration: none;
   color: var(--text);
-  transition: color 0.2s ease;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-btn:hover {
   color: var(--accent);
+}
+
+.nav-btn:hover::after {
+  width: 100%;
 }
 
 /* Hero */
@@ -118,12 +134,12 @@ a:hover {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(139, 233, 253, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(139, 233, 253, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(139, 233, 253, 0.15);
 }
 
 /* Footer */
