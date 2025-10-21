@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+  --bg: #f8f8f8;
+  --text: #222;
+  --accent: #007aff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 10%;
+  background: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text);
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 10%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.subtitle {
+  margin-top: 1rem;
+  color: #555;
+}
+
+#scrollBtn {
+  margin-top: 2rem;
+  padding: 0.8rem 1.8rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#scrollBtn:hover {
+  background: #005fd4;
+}
+
+.about,
+.projects,
+.contact {
+  padding: 4rem 10%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.email-btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+
+.email-btn:hover {
+  background: #005fd4;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #555;
+}
