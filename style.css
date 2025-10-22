@@ -52,6 +52,7 @@ nav .logo {
   text-decoration: none;
   color: var(--text);
   position: relative;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
@@ -66,12 +67,28 @@ nav .logo {
   transition: width 0.3s ease;
 }
 
+/* Hover effect */
 .nav-btn:hover {
   color: var(--accent);
 }
 
 .nav-btn:hover::after {
   width: 100%;
+}
+
+/* Khi ở section tương ứng */
+.nav-btn.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.nav-btn.active::after {
+  width: 100%;
+}
+
+/* Cuộn mượt */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Hero */
