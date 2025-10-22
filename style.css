@@ -184,3 +184,9 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+.card:nth-child(1):hover { box-shadow: 0 0 20px #00c8ff; }
+.card:nth-child(2):hover { box-shadow: 0 0 20px #9b5cff; }
+.card:nth-child(3):hover { box-shadow: 0 0 20px #00ffae; }
+.card:nth-child(4):hover { box-shadow: 0 0 20px #ff85e4; }
+
