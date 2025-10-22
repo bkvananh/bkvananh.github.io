@@ -1,75 +1,78 @@
 :root {
-  --bg: #0b0b0b;
-  --text: #eaeaea;
-  --accent: #8be9fd;
+  --bg: #0e0e10;
+  --text: #f4f4f5;
+  --accent: #00d1ff;
+  --nav-height: 70px;
+  --transition: all 0.3s ease;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
-/* Navbar */
-nav {
+/* NAVIGATION */
+header {
   position: fixed;
-  width: 100%;
   top: 0;
-  background: rgba(15, 15, 15, 0.85);
+  width: 100%;
+  height: var(--nav-height);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
+  z-index: 100;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 14px 8%;
-  z-index: 10;
-}
-
-nav .logo {
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: var(--accent);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 2rem;
 }
 
-.nav-btn {
-  text-decoration: none;
+.nav-links a {
   color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
   position: relative;
-  transition: color 0.3s ease;
+  padding: 6px 0;
+  transition: var(--transition);
 }
 
-.nav-btn::after {
+/* underline */
+.nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
-  width: 0%;
+  bottom: 0;
+  width: 100%;
   height: 2px;
   background: var(--accent);
-  transition: width 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
 }
 
-.nav-btn:hover::after {
-  width: 100%;
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
-.nav-btn.active::after {
-  width: 100%;
+.nav-links a.active::after {
+  transform: scaleX(1);
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
   position: relative;
   height: 100vh;
@@ -78,9 +81,9 @@ nav .logo {
   align-items: center;
   color: var(--text);
   overflow: hidden;
+  padding-top: var(--nav-height);
 }
 
-/* GIF nền */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -89,7 +92,6 @@ nav .logo {
   z-index: 0;
 }
 
-/* Lớp phủ đen nhẹ để làm nền tối hơn */
 .hero::after {
   content: "";
   position: absolute;
@@ -122,7 +124,6 @@ nav .logo {
   color: var(--accent);
 }
 
-/* Fade up animation */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -134,50 +135,14 @@ nav .logo {
   }
 }
 
-/* Section */
+/* SECTION STYLES */
 section {
-  padding: 100px 10%;
-  max-width: 900px;
-  margin: auto;
+  padding: 120px 10%;
+  min-height: 100vh;
 }
 
-h2 {
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
   color: var(--accent);
-  margin-bottom: 15px;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-/* Fade-in effect */
-.fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
