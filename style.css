@@ -88,7 +88,7 @@ nav .logo {
   position: absolute;
   inset: 0;
   background: url("https://media1.tenor.com/m/V8ZEl04Ef_4AAAAC/project-sekai-prsk.gif") center/cover no-repeat;
-  filter: brightness(0.7) blur(8px);
+  filter: brightness(0.5) blur(8px);
   z-index: -1;
 }
 
