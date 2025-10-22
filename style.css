@@ -88,7 +88,7 @@ header {
   position: absolute;
   inset: 0;
   background: url('https://media1.tenor.com/m/V8ZEl04Ef_4AAAAC/project-sekai-prsk.gif') center/cover no-repeat;
-  filter: blur(16px) brightness(0.3) saturate(0.8);
+  filter: blur(16px) brightness(0.7) saturate(0.8);
   z-index: 0;
 }
 
