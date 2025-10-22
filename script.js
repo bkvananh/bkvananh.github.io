@@ -1,4 +1,6 @@
-// Scroll smooth đến section khi click vào nav-btn
+// ------------------------------
+// Smooth scroll khi click vào nav-btn
+// ------------------------------
 document.querySelectorAll('.nav-btn').forEach(btn => {
   btn.addEventListener('click', e => {
     e.preventDefault();
@@ -9,7 +11,32 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
   });
 });
 
-// Fade-in effect khi cuộn
+// ------------------------------
+// Highlight nav-btn khi scroll đến section tương ứng
+// ------------------------------
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-btn");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120; // chỉnh cho vừa chiều cao navbar
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// ------------------------------
+// Fade-in effect khi section xuất hiện
+// ------------------------------
 const faders = document.querySelectorAll(".fade-in");
 
 const appearOptions = {
@@ -28,4 +55,7 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
+// ------------------------------
+// Console Easter egg 😌
+// ------------------------------
 console.log("%cWelcome to Anh’s portfolio! 🚀", "color:#8be9fd;font-weight:bold;");
